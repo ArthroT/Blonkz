@@ -1,2 +1,4 @@
 # Blonkz hnubub
-I hate ziggers
+1. parallax 
+2. ham
+3. login
