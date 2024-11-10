@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
+
+</head>
+<body style="background-image: url(Content/1370618.jpeg); background-size: 100%;">
+    <div class="loginbox">
+        <br>
+        <img src="Content/DhWupxIW4AMbMo-.webp" height="100px" width="100px">
+        <br>
+        <br>
+        <form class="loginform" action="index.html">
+            <label for="Name" class="name">Enter your name</label>
+            <input type="text" required class="nameinput">
+            <br>
+        
+            
+            <label for="lnumber" class="num">Enter login number</label>
+            <input type="number" class="numinput" minlength="5" maxlength="5" oninvalid="this.setCustomValidity('Login number must be exactly 5 digits')" onchange="this.setCustomValidity('')" >
+       <br>
+       <label for="birthyear" class="year">Enter year of birth</label>
+            <input type="date" class="birthdate" max="2008-01-01" required min="1939-01-01" > 
+            <br><br>
+            <label for="department">Select your department</label>
+            
+            <br>
+         <input type="radio" name="department" id="DeptChoice1" value="1" class="radiobuttons">
+            <label for="DeptChoice1 ">Department 1</label>
+           <br>
+            <input type="radio" name="department" id="DeptChoice2" value="2" class="radiobuttons">
+            <label for="DeptChoice2 ">Department 2</label>
+            
+
+            <br>
+           <button type="submit" class="ripple">Login</button>
+           <script>const buttons = document.querySelectorAll('.ripple')
+
+            buttons.forEach(button => {
+                button.addEventListener('click', function (e) {
+                    const x = e.pageX
+                    const y = e.pageY
+            
+                    const buttonTop = e.target.offsetTop
+                    const buttonLeft = e.target.offsetLeft
+            
+                    const xInside = x - buttonLeft
+                    const yInside = y - buttonTop
+            
+                    const circle = document.createElement('span')
+                    circle.classList.add('circle')
+                    circle.style.top = yInside + 'px'
+                    circle.style.left = xInside + 'px'
+            
+                    this.appendChild(circle)
+            
+                    setTimeout(() => circle.remove(), 500)
+                })
+            })</script>
+            
+        </form>
+    </div>
+    
+</body>
+</html>
