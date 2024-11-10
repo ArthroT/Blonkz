@@ -17,14 +17,28 @@ body {
   margin: 0 auto;
 }
 
+.containerHam {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
 .nav {
   position: fixed;
-  background-color: #222;
+  background-color: #000000;
   top: 0;
   left: 0;
   right: 0;
   transition: all 0.3s ease-in-out;
 }
+
+.navHam {
+    position: fixed;
+    background-color: #000000;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: all 0.3s ease-in-out;
+  }
 
 .nav .container {
   display: flex;
@@ -34,12 +48,27 @@ body {
   transition: all 0.3s ease-in-out;
 }
 
+.navHam .containerHam {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    transition: all 0.3s ease-in-out;
+  }
+
 .nav ul {
   display: flex;
   list-style-type: none;
   align-items: center;
   justify-content: center;
 }
+
+.navHam ul {
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    justify-content: center;
+  }
 
 .nav a {
   color: #fff;
@@ -48,24 +77,56 @@ body {
   transition: all 0.3s ease-in-out;
 }
 
+.navHam a {
+    color: #fff;
+    text-decoration: none;
+    padding: 7px 15px;
+    transition: all 0.3s ease-in-out;
+  }
+
 .nav.active {
   background-color: #fff;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
+.navHam.active {
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  }
+  .navHam.active.icon {
+    background-color: #fff;
+  }
+
+
+
 .nav.active a {
   color: #000;
 }
 
+.navHam.active a {
+    color: #000;
+  }
+
 .nav.active .container {
   padding: 10px 0;
 }
+
+.navHam.active .container {
+    padding: 10px 0;
+  }
 
 .nav a.current,
 .nav a:hover {
   color: #c0392b;
   font-weight: bold;
 }
+.navHam a.current,
+.navHam a:hover {
+  color: #c0392b;
+  font-weight: bold;
+}
+
+
 
 .hero {
   background-image: url('https://images.pexels.com/photos/450035/pexels-photo-450035.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
@@ -159,6 +220,20 @@ body{
     justify-content: center;
     text-align: center;
 }
+
+/* Style the hamburger menu */
+.navHam a.icon {
+    background: black;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+.navHam .containerHam #my-Links{
+    display: none;
+}
+
 .logo{
     font-size: 1.7em;
     color: var(--white);
@@ -194,5 +269,10 @@ body{
     .footer-container{
         width: 100%; 
         padding: 25px 10px;
+    }
+}
+@media (max-width: 767px) { 
+    .nav{
+        display:none;
     }
 }

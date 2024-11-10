@@ -8,3 +8,14 @@ function fixNav() {
         nav.classList.remove('active')
     }
 }
+
+const navHam = document.querySelector('.navHam')
+window.addEventListener('scroll', fixNavHam)
+
+function fixNavHam() {
+    if(window.scrollY > navHam.offsetHeight + 150) {
+        navHam.classList.add('active')
+    } else {
+        navHam.classList.remove('active')
+    }
+}
